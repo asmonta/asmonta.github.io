@@ -6,16 +6,16 @@ render_with_liquid: false
 ---
 
 
-Abaqus is my preferred finite element suite and it comes packaged with python **2.7**.  Here are several useful commands for model creation and processing.
+Abaqus is a commonly used finite element suite and it comes packaged with python **2.7**.  Here are several useful commands for model creation and processing.
 
 # Coordinates in place of Index
-Using default journal options, Abaqus defines its objects as masks, which refer to the index of the object. The following snippet instead tells Abaqus to store that information as coordinates. 
+Using default journal options, Abaqus defines its objects by index, called native masks. The following snippet instead tells Abaqus to store that information as coordinates. 
 ```python
 session.journalOptions.setValues(replayGeometry=COORDINATE, recoverGeometry=COORDINATE)
 ```
 
 # Libraries
-To create a Abaqus model from scratch, the following libraires are needed. 
+To create a Abaqus model from scratch, the following libraries are needed. 
 ```python
 from abaqus import *
 from abaqusConstants import *
@@ -43,19 +43,13 @@ For simple screenshots, the following snippet disables all viewport objects, and
 ```python
 session. linkedViewportCommands.setValues(linkViewports=True)
 session.graphicsOptions.setValues(backgroundStyle=SOLID, backgroundColor='#FFFFFF')
-session.viewports['Viewport: 1'].viewportAnnotationOptions.setValues(
-	triad=OFF,
-	legend=OFF, 
-	title=OFF, 
-	state=OFF, 
-	annotations=OFF, 
-	compass=OFF)
+session.viewports['Viewport: 1'].viewportAnnotationOptions.setValues(triad=OFF,	legend=OFF, title=OFF, state=OFF, annotations=OFF, compass=OFF)
 ```
 
 ## Publication Images
 For higher quality images, the following exports a render from Abaqus directly:
 ```python
-myFile = 'ExamplePicture' # extension not needed
+myFile = 'ExamplePicture' # extension not needed, saves to the working directory
 session.printToFile(fileName=myFile, format=PNG, canvasObjects=(
     session.viewports['Viewport: 1'], ))
 ```
@@ -63,14 +57,13 @@ session.printToFile(fileName=myFile, format=PNG, canvasObjects=(
 ## Deformed Geometry
 You can export the deformed geometry using the following script:
 ```python
-exportDir = 'C:/temp/'
-fileName = 'name.obj'
-session.writeOBJFile(fileName=exportDir+fileName , 
+fileName = './name.obj' # extension needed, saves to the working directory
+session.writeOBJFile(fileName=fileName, 
 	canvasObjects=(session.viewports['Viewport: 1'], )) # Exports the main window
 ```
 This script can be extended to export a sequence of geometries for a each frame in a ODB. However, for complex models this can result in several terabytes of models being generated, so it is not recommended. Instead, I would suggest linking a modeling program like Blender to read from and ODB to dynamically create a render of the model. 
 
-## Set font to Computer Modern (LaTeX)
+## Set font to Computer Modern (LaTeX font)
 
 Assuming you have computer modern installed:
 ```python
