@@ -5,7 +5,7 @@ tags: [Python]
 render_with_liquid: false
 ---
 
-[Anaconda <span class="fa-solid fa-arrow-up-right-from-square"/>](https://www.anaconda.com/download) is a python distribution 
+[Anaconda <span class="fa-solid fa-arrow-up-right-from-square"/>](anaconda.com/download) is a python distribution 
 
 # Useful commands
 Here are several useful commands for conda.
@@ -99,7 +99,7 @@ source MY_ENV/bin/activate        # activate the environment
 
 (MY_ENV) $ conda-unpack           # Cleanup prefixes from in the active environment.
 ```
-Read more [here <span class="fa-solid fa-arrow-up-right-from-square"/>](https://www.anaconda.com/blog/moving-conda-environments).
+Read more [here <span class="fa-solid fa-arrow-up-right-from-square"/>](anaconda.com/blog/moving-conda-environments).
 
 ## Set up Conda to PATH variable (Windows)
 For automatons, it is useful to set up Conda to run from the command line
