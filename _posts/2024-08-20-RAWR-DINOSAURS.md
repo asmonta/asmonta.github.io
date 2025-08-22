@@ -8,16 +8,15 @@ render_with_liquid: false
 Most of my prints originate from engineering models, so I wanted to extend into something else. Being a big fan of pre-historic life, I found several 3D scans of fossils, which I then gathered, repaired, and printed. These were all done on FDM machines.
 
 ## Utahraptor
-The first scan I found, repaired, and printed was the skull of Utahraptor. The final skull is 81 cm long and was printed in sections. 
+The first scan I found, repaired, and printed was the skull of Utahraptor. The final skull is 81 cm long and was printed in sections, for scale there is a water bottle in the center of the skull
 
 <img src="pictures/dinosaurs/Utahraptor.JPG" alt="Utahraptor"/>
 
 ### Info
-Utahraptor, large dinosaur from the Early Cretaceous period, about 135 to 130 million years ago, found in what is now the United States. It is the largest known member of the dromaeosaurid family, and adults measured around 20 to 23 feet long and typically weighed around 1,100 pounds.
+Utahraptor, large dinosaur from the Early Cretaceous period, about 135 to 130 million years ago. It is (was) the largest known member of the dromaeosaurid family; adults measured around 20 to 23 feet long and typically weighed around 1,100 pounds.
 
 ## Velociraptor
-Velociraptor is a small relative of Utahraptor, and I also printed its skull. The cylinder in the bottle right corner exists to strengthen the jaws.
-
+Velociraptor is a small relative of Utahraptor, and I also printed its skull. 
 <img src="pictures/dinosaurs/Velociraptor.JPG" alt="Velociraptor" width="200"/>
 
 ### Info
